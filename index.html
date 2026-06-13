@@ -89,9 +89,10 @@ body{font-family:system-ui,sans-serif;background:#F4F3F0;height:100vh;overflow:h
 .notes-save{background:#48A878;color:#fff;border:none;padding:8px 14px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;align-self:flex-start;}
 .notes-save:hover{background:#3D9368;}
 .questions-grid{display:flex;flex-direction:column;gap:8px;}
-.q-item{background:#fff;padding:11px 12px;border:1px solid #E5E3DD;border-left:3px solid #48A878;border-radius:6px;display:flex;align-items:flex-start;gap:9px;font-size:13px;line-height:1.5;}
+.q-item{background:#fff;padding:11px 12px;border:1px solid #E5E3DD;border-left:3px solid #48A878;border-radius:6px;display:grid;grid-template-columns:auto auto 1fr auto;column-gap:9px;row-gap:6px;align-items:center;font-size:13px;line-height:1.5;}
+.q-item label{grid-column:1 / -1;cursor:pointer;}
 .q-item input{margin-top:2px;cursor:pointer;flex-shrink:0;accent-color:#48A878;}
-.q-item label{cursor:pointer;flex:1;}
+.q-item label{cursor:pointer;}
 .q-item input:checked+label{color:#999;text-decoration:line-through;}
 .q-act{display:flex;gap:2px;flex-shrink:0;}
 .q-grip{cursor:grab;color:#BBB;font-size:14px;padding:0 4px;user-select:none;flex-shrink:0;}
