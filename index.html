@@ -139,7 +139,7 @@ body.resizing *{user-select:none;pointer-events:none;}body.resizing .resz{pointe
   .notes-body textarea{min-height:200px;}
   .tablet-switch{display:inline-flex;}
 }
-@media(min-width:768px) and (max-width:1366px) and (orientation:landscape){
+@media(max-width:1366px) and (orientation:landscape){
   body.force-desktop .ab{flex-direction:row;}
   .ab:not(.force-desktop-inner){flex-direction:row;}
   .sb{width:340px !important;max-height:none;border-right:1px solid #DDDBD5;border-bottom:none;overflow:hidden;display:flex;flex-direction:column;}
@@ -150,7 +150,7 @@ body.resizing *{user-select:none;pointer-events:none;}body.resizing .resz{pointe
   .dp{width:100% !important;min-height:0;border-left:1px solid #DDDBD5;border-top:none;flex:1;}
   .notes-panel{width:100% !important;min-height:0;border-left:1px solid #DDDBD5;border-top:none;flex:1;}
 }
-@media(min-width:768px) and (max-width:1366px) and (orientation:portrait){
+@media(max-width:1366px) and (orientation:portrait){
   .ab{flex-direction:column;}
   .sb{width:100% !important;max-height:none;border-right:none;border-bottom:1px solid #DDDBD5;overflow:visible;display:flex;flex-direction:column;flex-shrink:0;}
   .sl{display:flex;flex-direction:row;overflow-x:auto;overflow-y:hidden;max-height:84px;}
@@ -159,9 +159,6 @@ body.resizing *{user-select:none;pointer-events:none;}body.resizing .resz{pointe
   .dt{width:100% !important;min-height:auto;border-right:none;border-bottom:1px solid #DDDBD5;}
   .dp{width:100% !important;min-height:0;border-left:none;border-top:1px solid #DDDBD5;flex:1;}
   .notes-panel{width:100% !important;min-height:0;border-left:none;border-top:2px solid #48A878;flex:1;}
-}
-@media(max-width:767px){
-  .dt,.dp,.notes-panel{display:none;}
 }
 @media(max-width:1366px){
   body.force-desktop .sb{width:180px !important;max-height:none !important;border-right:1px solid #DDDBD5;border-bottom:none;overflow-y:auto;flex-direction:column;}
@@ -176,6 +173,12 @@ body.resizing *{user-select:none;pointer-events:none;}body.resizing .resz{pointe
   body.force-desktop .notes-panel{width:252px !important;min-width:160px;flex-shrink:0;display:flex !important;border-left:2px solid #48A878;border-top:none;}
   body.force-desktop .resz{display:flex !important;}
   body.force-desktop .reset-w{display:inline-block !important;}
+}
+@media(max-width:900px){
+  body.force-desktop .sb{width:110px !important;}
+  body.force-desktop .dt{width:170px !important;min-width:120px;}
+  body.force-desktop .notes-panel{display:none !important;}
+  body.force-desktop .resz[data-resz="notes"]{display:none !important;}
 }
 </style>
 </head>
